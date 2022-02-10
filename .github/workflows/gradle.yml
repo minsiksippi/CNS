@@ -30,11 +30,11 @@ jobs:
       run: ./gradlew clean build
        
     - name: Make Directory for deliver
-        run: mkdir deploy
+      run: mkdir deploy
         
     - name: Copy Jar
-        run: cp ./build/libs/*.jar ./deploy/
+      run: cp ./build/libs/*.jar ./deploy/
         
     - name: Make zip file
-        run: zip -r -qq -j ./springboot-intro-build.zip ./deploy
+      run: zip -r -qq -j ./springboot-intro-build.zip ./deploy
 
