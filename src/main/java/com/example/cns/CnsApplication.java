@@ -8,6 +8,7 @@ public class CnsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CnsApplication.class, args);
+        //ssss
     }
 
 }
