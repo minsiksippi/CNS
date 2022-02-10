@@ -43,3 +43,16 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: aws s3 cp --region ap-northeast-1 --acl private cns_project.zip s3://minsik-bucket1
+      
+ # Deploy
+    - name: Deploy
+      env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+          aws deploy create-deployment \
+          --application-name CNS-deploy \
+          --deployment-group-name deploy-kms \
+          --file-exists-behavior OVERWRITE \
+          --s3-location bucket=minsik-bucket1,bundleType=zip,key=cns_project.zip \
+          --region ap-northeast-1
