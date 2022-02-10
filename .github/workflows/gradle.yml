@@ -28,3 +28,13 @@ jobs:
     
     - name: Build with Gradle
       run: ./gradlew clean build
+       
+    - name: Make Directory for deliver
+        run: mkdir deploy
+        
+    - name: Copy Jar
+        run: cp ./build/libs/*.jar ./deploy/
+        
+    - name: Make zip file
+        run: zip -r -qq -j ./springboot-intro-build.zip ./deploy
+
