@@ -34,6 +34,9 @@ jobs:
         
     - name: Copy War
       run: cp build/libs/*.war deploy
+    
+    - name: Copy appspec
+      run: cp appspec.yml deploy
         
     - name: Make zip file
       run: zip -r -qq -j ./cns_project.zip ./deploy
