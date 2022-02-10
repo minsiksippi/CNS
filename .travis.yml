@@ -1,5 +1,7 @@
 language: java
 
+jdk:
+  - jdk17
 
 branches: # 1.
   only:
