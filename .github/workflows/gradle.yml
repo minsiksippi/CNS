@@ -47,3 +47,5 @@ jobs:
             --region ap-northeast-1 \
             --acl private \
             ./springboot-intro-build.zip s3://minsik-bucket1/
+            
+            
