@@ -54,8 +54,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
           aws deploy create-deployment \
-          --application-name CNS-deploy \
-          --deployment-group-name deploy-kms \
+          --application-name new \
+          --deployment-group-name new \
           --file-exists-behavior OVERWRITE \
           --s3-location bucket=minsik-bucket1,bundleType=zip,key=cns_project.zip \
           --region ap-northeast-1
