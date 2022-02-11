@@ -4,4 +4,13 @@ files:
   - source: /
     destination: /usr/local/tomcat/webapps
 
-
+hooks:
+  Application Stop:
+    - location: scripts/stop_application.sh
+      timeout: 300
+  BeforeInstall:
+    - location: scripts/uninstall_war_file.sh
+      timeout: 300
+  Application Start:
+    - location: scripts/start_application.sh
+      timeout: 300
