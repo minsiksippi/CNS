@@ -6,11 +6,11 @@ files:
 
 hooks:
   Application Stop:
-    - location: scripts/stop_application.sh
+    - location: stop_application.sh
       timeout: 300
   BeforeInstall:
-    - location: scripts/uninstall_war_file.sh
+    - location: uninstall_war_file.sh
       timeout: 300
   Application Start:
-    - location: scripts/start_application.sh
+    - location: start_application.sh
       timeout: 300
