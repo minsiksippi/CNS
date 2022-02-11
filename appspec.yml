@@ -13,15 +13,15 @@ permissions:
 hooks:
   Application Stop:
     - location: /stop_application.sh
-      timeout: 300
+      timeout: 600
       runas: ec2-user
 
   BeforeInstall:
     - location: /uninstall_war_file.sh
-      timeout: 300
+      timeout: 600
       runas: ec2-user
 
   Application Start:
     - location: /start_application.sh
-      timeout: 300
+      timeout: 600
       runas: ec2-user
