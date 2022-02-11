@@ -11,11 +11,17 @@ permissions:
     group: ec2-user
 
 hooks:
-
+  Application Stop:
+    - location: stop_application.sh
+      timeout: 300
+      runas: ec2-user
 
   BeforeInstall:
     - location: uninstall_war_file.sh
       timeout: 300
       runas: ec2-user
 
-
+  Application Start:
+    - location: start_application.sh
+      timeout: 300
+      runas: ec2-user
