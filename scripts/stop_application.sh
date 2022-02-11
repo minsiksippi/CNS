@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-echo stop
+echo "stop"
