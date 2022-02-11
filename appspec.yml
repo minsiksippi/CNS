@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /usr/local/tomcat
+    destination: /usr/local/tomcat/webapps
 
 permissions:
   - object: /
