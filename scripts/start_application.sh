@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-echo "start"
+cd /usr/local/tomcat/bin
+shutdown.sh
+startup.sh
