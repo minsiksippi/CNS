@@ -2,18 +2,5 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /usr/local/tomcat/webapps/
-
-permissions:
-  - object: /usr/local/tomcat/webapps/
-    pattern: "*"
-    owner: root
-    mode: 777
-    type:
-      - file
-hooks:
-  AfterInstall:
-    - location: scripts/after_deploy.sh
-      timeout: 300
-      runas: root
+    destination: /home/ec2-user/build/deploy
 
