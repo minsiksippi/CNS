@@ -39,7 +39,7 @@ jobs:
       run: cp appspec.yml deploy
 
     - name: Copy shell
-      run: cp /scripts/* deploy
+      run: cp scripts/* deploy
         
     - name: Make zip file
       run: zip -r -qq -j ./cns_project.zip ./deploy
