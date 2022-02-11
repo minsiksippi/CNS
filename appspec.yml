@@ -11,7 +11,7 @@ permissions:
     group: ec2-user
 
 hooks:
-  Application Stop:
+  ApplicationStop:
     - location: stop_application.sh
       timeout: 600
       runas: ec2-user
@@ -21,7 +21,7 @@ hooks:
       timeout: 600
       runas: ec2-user
 
-  Application Start:
+  ApplicationStart:
     - location: start_application.sh
       timeout: 600
       runas: ec2-user
