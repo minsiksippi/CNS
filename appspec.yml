@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /usr/local
+    destination: /usr/local/tomcat/webapps
 permissions:
   - object: /
     pattern: 777
@@ -11,13 +11,13 @@ permissions:
 hooks:
   ApplicationStop:
     - location: stop_application.sh
-      timeout: 600
+      timeout: 300
       runas: ec2-user
   BeforeInstall:
     - location: uninstall_war_file.sh
-      timeout: 600
+      timeout: 300
       runas: ec2-user
   ApplicationStart:
     - location: start_application.sh
-      timeout: 600
+      timeout: 300
       runas: ec2-user
